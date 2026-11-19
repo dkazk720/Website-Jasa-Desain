@@ -1,0 +1,476 @@
+:root {
+    --border: 1px solid black;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif, Arial;
+}
+
+body {
+    background: linear-gradient(to bottom right, white, #3498db);
+    color: #333;
+    line-height: 1.6;
+    animation: munculHalus 1.2s ease-out 0s backwards;
+    min-height: 100vh;
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 15px 30px;
+    border-radius: 20px;
+    box-shadow: 0 1px 10px var(--border);
+    margin-bottom: 20px;
+    border: var(--border);
+    position: sticky;
+    top: 20px;
+    z-index: 1000;
+    animation: naikTurun 5s ease-in-out infinite;
+}
+
+.kiri h1 {
+    font-size: 24px;
+    color: #2c3e50;
+}
+
+.kanan a {
+    text-decoration: none;
+    color: #555;
+    margin-left: 20px;
+    font-weight: 600;
+    width: auto;
+    height: auto;
+    border-radius: 50px;
+    padding: 8px 15px;
+    box-shadow: 0 1px 2px var(--border);
+    display: inline-block;
+    border: var(--border);
+    transition: transform 0.5s ease, color 0.3s ease;
+}
+
+.kanan a:hover {
+    transform: scale(1.05);
+    color: #3498db;
+}
+
+#Beranda {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    margin-bottom: 30px;
+    gap: 40px;
+    border: var(--border);
+    width: 80%;
+    margin: 0 auto;
+}
+
+.teksmenarik {
+    flex: 1;
+}
+
+.teksmenarik h1 {
+    font-size: 32px;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+.teksmenarik p {
+    font-size: 16px;
+    color: #666;
+}
+
+.gambarmenarik {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.gambarmenarik img {
+    width: 100%;
+    max-width: 560px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 12px;
+    background-color: #ddd;
+    box-shadow: 0 4px 6px black;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 26px;
+    color: #2c3e50;
+    margin-bottom: 25px;
+}
+
+.produk-grid,
+.fototerbaik-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    margin-bottom: 30px;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 20px;
+    border: var(--border);
+}
+
+.card-produk,
+.card-foto {
+    border: var(--border);
+    border-radius: 20px;
+    padding: 15px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-produk:hover,
+.card-foto:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px black;
+}
+
+.card-produk img,
+.card-foto img {
+    width: auto;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-bottom: 12px;
+}
+
+.card-foto .video {
+    width: 100%;
+    height: 180px;
+    border-radius: 12px;
+    display: block;
+    object-fit: cover;
+}
+
+.card-produk h3,
+.card-foto h3 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.card-produk p,
+.card-foto p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.harga-badge {
+    align-self: flex-start;
+    background-color: #27ae60;
+    color: #fff;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.kotak {
+    width: 450px;
+    height: auto;
+    border-radius: 20px;
+    background-color: #ffffff;
+    padding: 20px;
+    margin: 0 !important;
+    border: var(--border);
+    box-sizing: border-box;
+}
+
+.kontak-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.kontak-info {
+    list-style: none;
+    flex: 1;
+    min-width: 250px;
+}
+
+.kontak-info li {
+    margin-bottom: 12px;
+    font-size: 15px;
+}
+
+.Kontakaja {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    min-width: 200px;
+}
+
+.Gambarkontak {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: var(--border);
+}
+
+.btn-lokasi {
+    background-color: #3498db;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    width: auto;
+    height: 50px;
+}
+
+.btn-lokasi a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.btn-lokasi:hover {
+    background-color: #2980b9;
+}
+
+.teks {
+    text-align: center;
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 20px;
+}
+.tekscopy {
+    text-align: center;
+    font-size: 14px;
+    color: black;
+    margin-top: 20px;
+}
+
+.TampilanKontak {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    max-width: 1000px;
+    margin: 30px auto 0 auto;
+}
+
+.form {
+    width: 450px;
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 20px;
+    border: var(--border);
+    margin: 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    box-sizing: border-box;
+
+}
+
+.form form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+}
+
+.form label {
+    font-weight: bold;
+    font-size: 14px;
+    color: #2c3e50;
+    margin-bottom: 2px;
+}
+
+.form input {
+    width: 80%;
+    padding: 10px 14px;
+    border-radius: 12px;
+    border: var(--border);
+    font-family: inherit;
+    font-size: 14px;
+    outline: none;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form input:focus,
+.form textarea:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+}
+
+.form textarea {
+    width: 80%;
+    padding: 10px 14px;
+    border-radius: 12px;
+    border: var(--border);
+    font-family: inherit;
+    font-size: 14px;
+    outline: none;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    resize: none;
+}
+
+.form button[type="submit"] {
+    background-color: #3498db;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 12px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    width: 70px;
+}
+
+.form button[type="submit"]:hover {
+    background-color: #2980b9;
+    transform: scale(1.02);
+}
+
+@keyframes naikTurun {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-4px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes munculHalus {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    main {
+        padding: 10px;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px;
+        position: sticky; 
+        top: 0;
+    }
+
+    .kanan {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .kanan a {
+        margin-left: 0;
+    }
+
+    #Beranda {
+        flex-direction: column;
+        padding: 20px;
+        gap: 20px;
+        text-align: center;
+    }
+
+    .gambarmenarik img {
+        width: 460px;
+        max-height: 300px;
+    }
+
+    .teksmenarik h1 {
+        font-size: 24px;
+    }
+
+    .teksmenarik p {
+        font-size: 14px;
+    }
+
+    .gambarmenarik img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .kotak {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 15px;
+    }
+
+    .kontak-card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .kontak-info {
+        min-width: 100%;
+        word-break: break-word;
+    }
+
+    .Kontakaja {
+        min-width: 100%;
+    }
+    .TampilanKontak {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .section-title {
+        font-size: 20px;
+    }
+
+    .produk-grid,
+    .fototerbaik-grid {
+        grid-template-columns: 1fr;
+        padding: 10px;
+    }
+
+    .harga-badge {
+        align-self: center;
+    }
+}
